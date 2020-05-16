@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+    dmzx.scheduledmaintenance.listener:
+        class: dmzx\scheduledmaintenance\event\listener
+        tags: [{ name: event.listener }]
+    dmzx.scheduledmaintenance.controller.acp:
+        class: dmzx\scheduledmaintenance\controller\acp_controller

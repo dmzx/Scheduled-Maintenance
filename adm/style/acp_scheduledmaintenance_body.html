@@ -1,0 +1,46 @@
+{% include 'overall_header.html' %}
+
+{% INCLUDECSS '@dmzx_scheduledmaintenance/css/scheduledmaintenance.css' %}
+
+<h1>{{ lang('ACP_SCHEDULEDMAINTENANCE_TITLE') }}</h1>
+
+<p><img src="https://img.shields.io/badge/{{ lang('Version') }}-{{ SCHEDULEDMAINTENANCE_VERSION }}-green.svg?style=plastic" /></p>
+
+{% if S_ERROR %}
+	<div class="errorbox">
+		<h3>{{ lang('WARNING') }}</h3>
+		<p>{{ ERROR_MSG }}</p>
+	</div>
+{% endif %}
+
+<fieldset>
+	<legend>{{ lang('ACP_SCHEDULEDMAINTENANCE') }}</legend>
+	<dl>
+		<dt><label>{{ lang('ACP_SCHEDULEDMAINTENANCE_EDIT') }}{{ lang('COLON') }}</label><br /><span>{{ lang('ACP_SCHEDULEDMAINTENANCE_EDIT_EXPLAIN') }}</span></dt>
+		<dd>
+		{% if S_SCHEDULEDMAINTENANCE_EDIT %}
+			<form method="post" action="{{ U_ACTION }}">
+				<dl>
+					<dt><label for="dmzx_scheduledmaintenance_enable">{{ lang('ACP_SCHEDULEDMAINTENANCE_ENABLE') }}{{ lang('COLON') }}</label></dt>
+					<dd>
+						<label><input type="radio" class="radio" name="dmzx_scheduledmaintenance_enable" value="1"{% if SCHEDULEDMAINTENANCE_ENABLE %} id="dmzx_scheduledmaintenance_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+						<label><input type="radio" class="radio" name="dmzx_scheduledmaintenance_enable" value="0"{% if not SCHEDULEDMAINTENANCE_ENABLE %} id="dmzx_scheduledmaintenance_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+					</dd>
+				</dl>
+				<textarea class="inputbox full" id="scheduledmaintenance" name="scheduledmaintenance" placeholder="">{{ SCHEDULEDMAINTENANCE_EDIT }}</textarea>
+				<fieldset class="submit-buttons">
+					<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+					{{ S_FORM_TOKEN }}
+				</fieldset>
+			</form>
+		{% else %}
+			<div>{{ SCHEDULEDMAINTENANCE }}</div>
+			<div class="scheduledmaintenance-action">
+				<a href="{{ U_ACTION ~ '&edit_scheduledmaintenance=1' }}"><i class="icon fa-pencil fa-fw"></i></a>
+			</div>
+		{% endif %}
+		</dd>
+	</dl>
+</fieldset>
+
+{% include 'overall_footer.html' %}

@@ -1,0 +1,15 @@
+.scheduledmaintenance-action {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+.scheduledmaintenance-action a {
+	text-decoration: none;
+	color: #bcbcbc;
+	padding: 2px 4px;
+}
+
+.scheduledmaintenance-action a:hover {
+	color: #969696;
+}

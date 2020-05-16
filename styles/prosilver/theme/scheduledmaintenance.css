@@ -1,0 +1,12 @@
+.note-box {
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	font-size: 12px;
+	margin-bottom: 10px;
+	padding: 7px;
+	text-align: justify;
+}
+
+.note-box.green {
+	border-color: #43a347;
+}
