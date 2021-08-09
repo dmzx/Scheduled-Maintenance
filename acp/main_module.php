@@ -24,16 +24,16 @@ class main_module
 	 *
 	 * @param int	$id	The module ID
 	 * @param string $mode The module mode (for example: manage or settings)
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public function main($id, $mode)
 	{
 		global $phpbb_container;
 
-		/** @var \dmzx\scheduledmaintenance\controller\acp_controller $acp_controller */
+		/** @var acp_controller $acp_controller */
 		$acp_controller = $phpbb_container->get('dmzx.scheduledmaintenance.controller.acp');
 
-		/** @var \phpbb\language\language $language */
+		/** @var language $language */
 		$language = $phpbb_container->get('language');
 
 		// Load a template from adm/style for our ACP page

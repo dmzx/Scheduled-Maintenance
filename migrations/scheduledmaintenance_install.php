@@ -10,7 +10,9 @@
 
 namespace dmzx\scheduledmaintenance\migrations;
 
-class scheduledmaintenance_install extends \phpbb\db\migration\container_aware_migration
+use phpbb\db\migration\container_aware_migration;
+
+class scheduledmaintenance_install extends container_aware_migration
 {
 	public static function depends_on()
 	{

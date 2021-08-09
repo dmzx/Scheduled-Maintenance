@@ -10,13 +10,15 @@
 
 namespace dmzx\scheduledmaintenance;
 
+use phpbb\extension\base;
+
 /**
  * Scheduled Maintenance Extension base
  *
  * It is recommended to remove this file from
  * an extension if it is not going to be used.
  */
-class ext extends \phpbb\extension\base
+class ext extends base
 {
 	public function is_enableable()
 	{

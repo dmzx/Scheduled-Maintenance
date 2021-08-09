@@ -10,40 +10,45 @@
 
 namespace dmzx\scheduledmaintenance\event;
 
+use phpbb\config\config;
+use phpbb\config\db_text;
+use phpbb\language\language;
+use phpbb\template\template;
+use phpbb\textformatter\s9e\renderer;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	/** @var \phpbb\language\language */
+	/** @var language */
 	protected $language;
 
-	/** @var \phpbb\config\db_text */
+	/** @var db_text */
 	protected $config_text;
 
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\textformatter\s9e\renderer */
+	/** @var renderer */
 	protected $renderer;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param \phpbb\language\language				$language			Language object
-	 * @param \phpbb\config\db_text					$config_text		Config text object
-	 * @param \phpbb\config\config					$config			 Config object
-	 * @param \phpbb\textformatter\s9e\renderer		$renderer			Textformatter renderer object
-	 * @param \phpbb\template\template				$template			Template object
+	 * @param language				$language			Language object
+	 * @param db_text					$config_text		Config text object
+	 * @param config					$config			 Config object
+	 * @param renderer		$renderer			Textformatter renderer object
+	 * @param template				$template			Template object
 	 */
 	public function __construct(
-		\phpbb\language\language $language,
-		\phpbb\config\db_text $config_text,
-		\phpbb\config\config $config,
-		\phpbb\textformatter\s9e\renderer $renderer,
-		\phpbb\template\template $template
+		language $language,
+		db_text $config_text,
+		config $config,
+		renderer $renderer,
+		template $template
 	)
 	{
 		$this->language			= $language;

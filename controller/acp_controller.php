@@ -10,39 +10,50 @@
 
 namespace dmzx\scheduledmaintenance\controller;
 
+use phpbb\config\config;
+use phpbb\config\db_text;
+use phpbb\language\language;
+use phpbb\log\log;
+use phpbb\request\request;
+use phpbb\template\template;
+use phpbb\textformatter\s9e\parser;
+use phpbb\textformatter\s9e\renderer;
+use phpbb\textformatter\s9e\utils;
+use phpbb\user;
+
 /**
  * Scheduled Maintenance ACP controller.
  */
 class acp_controller
 {
-	/** @var \phpbb\config\db_text */
+	/** @var db_text */
 	protected $config_text;
 
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\language\language */
+	/** @var language */
 	protected $language;
 
-	/** @var \phpbb\log\log */
+	/** @var log */
 	protected $log;
 
-	/** @var \phpbb\request\request */
+	/** @var request */
 	protected $request;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
-	/** @var \phpbb\textformatter\s9e\parser */
+	/** @var parser */
 	protected $parser;
 
-	/** @var \phpbb\textformatter\s9e\renderer */
+	/** @var renderer */
 	protected $renderer;
 
-	/** @var \phpbb\textformatter\s9e\utils */
+	/** @var utils */
 	protected $utils;
 
 	/** @var string Custom form action */
@@ -51,28 +62,28 @@ class acp_controller
 	/**
 	 * Constructor.
 	 *
-	 * @param \phpbb\config\db_text					$config_text		Config text object
-	 * @param \phpbb\config\config					$config			 Config object
-	 * @param \phpbb\language\language				$language			Language object
-	 * @param \phpbb\log\log						$log				Log object
-	 * @param \phpbb\request\request				$request			Request object
-	 * @param \phpbb\template\template				$template			Template object
-	 * @param \phpbb\user							$user				User object
-	 * @param \phpbb\textformatter\s9e\parser		$parser				Textformatter parser object
-	 * @param \phpbb\textformatter\s9e\renderer		$renderer			Textformatter renderer object
-	 * @param \phpbb\textformatter\s9e\utils		$utils				Textformatter utilities object
+	 * @param db_text					$config_text		Config text object
+	 * @param config					$config			 Config object
+	 * @param language				$language			Language object
+	 * @param log						$log				Log object
+	 * @param request				$request			Request object
+	 * @param template				$template			Template object
+	 * @param user							$user				User object
+	 * @param parser		$parser				Textformatter parser object
+	 * @param renderer		$renderer			Textformatter renderer object
+	 * @param utils		$utils				Textformatter utilities object
 	 */
 	public function __construct(
-		\phpbb\config\db_text $config_text,
-		\phpbb\config\config $config,
-		\phpbb\language\language $language,
-		\phpbb\log\log $log,
-		\phpbb\request\request $request,
-		\phpbb\template\template $template,
-		\phpbb\user $user,
-		\phpbb\textformatter\s9e\parser $parser,
-		\phpbb\textformatter\s9e\renderer $renderer,
-		\phpbb\textformatter\s9e\utils $utils
+		db_text $config_text,
+		config $config,
+		language $language,
+		log $log,
+		request $request,
+		template $template,
+		user $user,
+		parser $parser,
+		renderer $renderer,
+		utils $utils
 	)
 	{
 		$this->config_text		= $config_text;
