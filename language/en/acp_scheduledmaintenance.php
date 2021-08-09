@@ -39,4 +39,5 @@ $lang = array_merge($lang, [
 	'ACP_SCHEDULEDMAINTENANCE_SETTING_SAVED'	=> 'Scheduled Maintenance saved.',
 	'ACP_SCHEDULEDMAINTENANCE_EDIT'				=> 'Edit scheduled maintenance',
 	'ACP_SCHEDULEDMAINTENANCE_EDIT_EXPLAIN'		=> 'Click the edit icon to edit the scheduled maintenance text and switch on/off the scheduled maintenance.',
+	'ACP_SCHEDULEDMAINTENANCE_VERSION'			=> 'Version',
 ]);
