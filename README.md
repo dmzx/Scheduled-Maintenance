@@ -1,6 +1,6 @@
 # Scheduled Maintenance Extension
 
-[![Build Status](https://travis-ci.org/dmzx/Scheduled-Maintenance.svg?branch=master)](https://travis-ci.org/dmzx/Scheduled-Maintenance)
+[![Build Status](https://github.com/dmzx/Scheduled-Maintenance/workflows/Tests/badge.svg)](https://github.com/phpbb-extensions/dmzx/Scheduled-Maintenance)
 
 ## Install
 1. Download the latest release.
