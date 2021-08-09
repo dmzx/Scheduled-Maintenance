@@ -1,5 +1,5 @@
 {% if SCHEDULED_MAINTENANCE and S_SCHEDULED_MAINTENANCE %}
 <div class="note-box green">
-	<strong>{{ lang('SCHEDULEDMAINTENANCE') }}{{ lang('COLON') }}</strong> {{ SCHEDULED_MAINTENANCE }}
+	<strong>{{ lang('SCHEDULEDMAINTENANCE') ~ lang('COLON') }}</strong> {{ SCHEDULED_MAINTENANCE }}
 </div>
 {% endif %}

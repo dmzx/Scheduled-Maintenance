@@ -16,12 +16,12 @@
 <fieldset>
 	<legend>{{ lang('ACP_SCHEDULEDMAINTENANCE') }}</legend>
 	<dl>
-		<dt><label>{{ lang('ACP_SCHEDULEDMAINTENANCE_EDIT') }}{{ lang('COLON') }}</label><br /><span>{{ lang('ACP_SCHEDULEDMAINTENANCE_EDIT_EXPLAIN') }}</span></dt>
+		<dt><label>{{ lang('ACP_SCHEDULEDMAINTENANCE_EDIT') ~ lang('COLON') }}</label><br><span>{{ lang('ACP_SCHEDULEDMAINTENANCE_EDIT_EXPLAIN') }}</span></dt>
 		<dd>
 		{% if S_SCHEDULEDMAINTENANCE_EDIT %}
 			<form method="post" action="{{ U_ACTION }}">
 				<dl>
-					<dt><label for="dmzx_scheduledmaintenance_enable">{{ lang('ACP_SCHEDULEDMAINTENANCE_ENABLE') }}{{ lang('COLON') }}</label></dt>
+					<dt><label for="dmzx_scheduledmaintenance_enable">{{ lang('ACP_SCHEDULEDMAINTENANCE_ENABLE') ~ lang('COLON') }}</label></dt>
 					<dd>
 						<label><input type="radio" class="radio" name="dmzx_scheduledmaintenance_enable" value="1"{% if SCHEDULEDMAINTENANCE_ENABLE %} id="dmzx_scheduledmaintenance_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
 						<label><input type="radio" class="radio" name="dmzx_scheduledmaintenance_enable" value="0"{% if not SCHEDULEDMAINTENANCE_ENABLE %} id="dmzx_scheduledmaintenance_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>

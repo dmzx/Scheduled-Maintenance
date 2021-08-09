@@ -149,7 +149,7 @@ class acp_controller
 		// Set output variables for display in the template
 		$this->template->assign_vars([
 			'S_ERROR'						=> $s_errors,
-			'ERROR_MSG'						=> $s_errors ? implode('<br />', $errors) : '',
+			'ERROR_MSG'						=> $s_errors ? implode('<br>', $errors) : '',
 			'SCHEDULEDMAINTENANCE_ENABLE'	=> $this->config['dmzx_scheduledmaintenance_enable'],
 			'SCHEDULEDMAINTENANCE'			=> $this->renderer->render(htmlspecialchars_decode($scheduledmaintenancetext, ENT_COMPAT)),
 			'SCHEDULEDMAINTENANCE_EDIT'		=> $this->utils->unparse($scheduledmaintenancetext),
