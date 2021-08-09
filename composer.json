@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "Scheduled Maintenance message.",
 	"homepage": "https://www.dmzx-web.net",
-	"version": "1.0.0",
-	"time": "2020-05-13",
+	"version": "1.0.1",
+	"time": "2021-08-09",
 	"license": "GPL-2.0-only",
 	"authors": [
 		{
