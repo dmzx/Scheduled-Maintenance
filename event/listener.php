@@ -40,7 +40,7 @@ class listener implements EventSubscriberInterface
 	 * @param language				$language			Language object
 	 * @param db_text				$config_text		Config text object
 	 * @param config				$config			 Config object
-	 * @param renderer		        $renderer			Textformatter renderer object
+	 * @param renderer				$renderer			Textformatter renderer object
 	 * @param template				$template			Template object
 	 */
 	public function __construct(

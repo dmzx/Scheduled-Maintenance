@@ -64,14 +64,14 @@ class acp_controller
 	 *
 	 * @param db_text					$config_text		Config text object
 	 * @param config					$config			 Config object
-	 * @param language				    $language			Language object
+	 * @param language					$language			Language object
 	 * @param log						$log				Log object
-	 * @param request				    $request			Request object
-	 * @param template				    $template			Template object
+	 * @param request					$request			Request object
+	 * @param template					$template			Template object
 	 * @param user						$user				User object
-	 * @param parser		            $parser				Textformatter parser object
-	 * @param renderer		            $renderer			Textformatter renderer object
-	 * @param utils		                $utils				Textformatter utilities object
+	 * @param parser					$parser				Textformatter parser object
+	 * @param renderer					$renderer			Textformatter renderer object
+	 * @param utils						$utils				Textformatter utilities object
 	 */
 	public function __construct(
 		db_text $config_text,
