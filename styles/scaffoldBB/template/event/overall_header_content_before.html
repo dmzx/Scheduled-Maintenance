@@ -1,0 +1,5 @@
+{% if SCHEDULED_MAINTENANCE and S_SCHEDULED_MAINTENANCE %}
+<div class="alert alert-info">
+	<strong>{{ lang('SCHEDULEDMAINTENANCE') ~ lang('COLON') }}</strong> {{ SCHEDULED_MAINTENANCE }}
+</div>
+{% endif %}
